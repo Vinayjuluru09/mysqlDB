@@ -3,36 +3,29 @@ package com.example.demo;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "users")
 public class Users {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
 
-    private String username;
+    private String name;
     private String email;
 
-    public Users() {}
-
-    public Users(String username, String email) {
-        this.username = username;
-        this.email = email;
-    }
-
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public String getUsername() {
-        return username;
+    public String getName() {
+        return name;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getEmail() {
